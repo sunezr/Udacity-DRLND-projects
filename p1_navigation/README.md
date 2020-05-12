@@ -1,4 +1,4 @@
-[//]: # (Image References)
+[//]: # "Image References"
 
 [image1]: https://user-images.githubusercontent.com/10624937/42135619-d90f2f28-7d12-11e8-8823-82b970a54d7e.gif "Trained Agent"
 
@@ -22,6 +22,8 @@ The task is episodic, and in order to solve the environment, your agent must get
 
 ### Getting Started
 
+### Download Environment
+
 1. Download the environment from one of the links below.  You need only select the environment that matches your operating system:
     - Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip)
     - Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana.app.zip)
@@ -32,16 +34,54 @@ The task is episodic, and in order to solve the environment, your agent must get
 
     (_For AWS_) If you'd like to train the agent on AWS (and have not [enabled a virtual screen](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md)), then please use [this link](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux_NoVis.zip) to obtain the environment.
 
-2. Place the file in the DRLND GitHub repository, in the `p1_navigation/` folder, and unzip (or decompress) the file. 
+2. Place the file in  the `p1_navigation/` folder, and unzip (or decompress) the file. 
+
+    ### Dependencies
+
+    To set up your python environment to run the code in this repository, follow the instructions below.
+
+    1. Create (and activate) a new environment with Python 3.6.
+
+       - __Linux__ or __Mac__: 
+
+       ```bash
+       conda create --name drlnd python=3.6
+       source activate drlnd
+       ```
+
+       - __Windows__: 
+
+       ```bash
+       conda create --name drlnd python=3.6 
+       activate drlnd
+       ```
+
+    2. Install PyTorch 0.4
+
+       You can use the code below to install PyTorch without CUDA or refer to [here](https://pytorch.org/get-started/previous-versions/).
+
+       ```bash
+       conda install pytorch=0.4.1 -c pytorch
+       ```
+
+    3. Clone the repository (if you haven't already!), and navigate to the `python/` folder.  Then, install several dependencies.
+
+    ```bash
+    pip install .
+    ```
+    
+    4. Create an [IPython kernel](http://ipython.readthedocs.io/en/stable/install/kernel_install.html) for the `drlnd` environment.  
+
+    ```bash
+python -m ipykernel install --user --name drlnd --display-name "drlnd"
+    ```
+    
+    5. Before running code in a notebook, change the kernel to match the `drlnd` environment by using the drop-down `Kernel` menu. 
 
 ### Instructions
 
-* `Navigation.ipynb` can be run in Udacity's workspace directly.
-
-* To run `Navigation.ipynb` on local machine, `Pyrhon 3.6`, `PyTorch 0.4.0` and `mlagent` is required. Use `pip install agent` to install mlagent directly. Then the code in first cell can be skipped. `PyTorch` is just used to build network in model.py,other versions or other frameworks may also work. 
-
-* Check the filename of environment when create `env'.
-
-* Be sure to close env with `env.close()` while `env` is out of use.
-
-* weight of trained agent is saved in `checkpoint.pth`.
+* Check the filename of environment when create `env`, then `Continuous_Control.ipynb` can be run successfully.
+* Be sure to close `env` before create another.
+* Weight of trained agent is saved in `checkpoint.pth`.
+* If you want to watch a trained agent directly, feel free to skip the training process(initialization is still required).
+* The algorithm and result are illustrated in [Report.md](Report.md).
