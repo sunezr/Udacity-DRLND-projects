@@ -29,7 +29,7 @@ To set up your python environment to run the code in this repository, follow the
    conda install pytorch=0.4.1 -c pytorch
    ```
 
-3. Clone the repository (if you haven't already!), and navigate to the `python/` folder.  Then, install several dependencies.
+3. Clone the repository (if you haven't already!), and navigate to the `python/` folder.  Then, install several dependencies. After install the dependencies,  the installation in each project can be ignored.
 
 ```bash
 git clone https://github.com/sunezr/Udacity-DRLND-projects.git
